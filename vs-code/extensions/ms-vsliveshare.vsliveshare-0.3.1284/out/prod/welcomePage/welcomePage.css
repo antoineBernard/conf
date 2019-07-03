@@ -1,0 +1,140 @@
+body {
+    padding: 1em;
+    line-height: 2em;
+}
+
+header {
+    display: flex;
+    margin-bottom: 1.5em;
+    padding-bottom: 0em;
+    border-bottom: 1px solid #474747;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header img {
+    margin-right: 1.5em;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.step-heading {
+    font-weight: bold;
+}
+
+.vsliveshare-welcome-page-main {
+    max-width: 65em;
+    min-width: 40em;
+    margin: 0 auto;
+    padding: 0 2em;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.box {
+    padding: 1em;
+    border: 1px solid var(--vscode-foreground);
+    display: inline-block;
+    margin: 0;
+}
+
+blockquote {
+   border-left: 5px solid #14517A;
+   padding: 6px 10px;
+   margin: 1em 0 0 0;
+   left: 0;
+   position: relative;
+   line-height: 2em;
+}
+
+blockquote p {
+    padding: 0;
+    margin: 0;
+ }
+
+button {
+    display: block;
+    width: auto;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 9px;
+    text-decoration: none;
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    outline: none;
+    cursor: pointer;
+    font-size: small;
+}
+
+button:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.button-prominent {
+    color: var(--vscode-extensionButton-prominentForeground);
+    background-color: var(--vscode-extensionButton-prominentBackground);
+}
+
+.button-prominent:hover {
+    background-color: var(--vscode-extensionButton-prominentHoverBackground);
+}
+
+.vsls-icon {
+    border: none;
+    height: 75px;
+}
+
+.why-details {
+    padding-top: 4px;
+    margin-left: 20px;
+}
+
+.sign-in-button {
+    margin-right: 15px;
+}
+
+.sign-in-button,
+.copy-invite-button {
+    float: left;
+}
+
+details > summary {
+    outline: none;
+}
+
+details p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    clear: both;
+}
+
+details > summary::-webkit-details-marker {
+    color: #3794ff;
+}
+
+.separator {
+    margin-top: 21px;
+    padding-top: 12px;
+    border-top: 1px solid #474747;
+    clear: both;
+}
+
+.pointer {
+    cursor: pointer;
+}

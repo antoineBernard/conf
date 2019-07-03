@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https:; script-src 'nonce-${nonce}'; style-src 'nonce-${nonce}'">
+        <link rel="stylesheet" href="${styleUri}" nonce="${nonce}">
+    </head>
+    <body>
+        <!-- The following empty script tag is used to inject variables -->
+        <script nonce="${nonce}"></script>
+        <div class="vsliveshare-welcome-page-main">
+            <header>
+                <img class="vsls-icon" src="https://aka.ms/vsls-icon" />
+                <div class="headings">
+                    <h1>Visual Studio Live Share</h1>
+                    <h2>Real-time Collaborative Development</h2>
+                </div>
+            </header>
+            <div class="js-liveshare-share-full">
+                <p>Welcome to Visual Studio Live Share! Get your team started with collaborative editing and debugging in just a few simple steps:</p>
+                <div class="js-liveshare-action-signin">
+                    <button class="sign-in-button js-sign-in-button">Launch Sign In</button>
+                    <details class="why-details">
+                        <summary><a id="why-sign-in" class="pointer">Why sign in?</a></summary>
+                        <p>When collaborating, it's important that others can identify who you are, in order to be confident with sharing access to their code and development environment. To make it easy to get started, you can sign in using an existing GitHub or Microsoft account.</p>
+                    </details>
+                    <p class="step-heading separator">After signing in:</p>
+                </div>
+                <ol>
+                    <li class="js-liveshare-share-pre">
+                        <p><span class="step-heading">Share</span> - Click the <i>Live Share</i> button in your status bar, which will share your project, and copy a unique session URL to your clipboard.</p>
+                        <img src="https://aka.ms/vsls/quickstart/share" width="136px" alt="Visual Studio Code share status bar item" />
+                        <p>You'll be asked to sign in the first time you share (using a GitHub or Microsoft account), which allows others to identify you when collaborating.
+                        <blockquote>
+                            <p>On Windows, you may be asked to allow Live Share to open a firewall port, in order to enable peer-to-peer connections.</p>
+                        </blockquote>
+                    </li>
+                    <li>
+                        <p><span class="step-heading">Invite</span> - Send the session URL to the developers you'd like to collaborate with (up to 5!), using e-mail, Skype, Slack, etc. <a id="security-info-link" href="https://aka.ms/vsls-security">View security info</a> to understand more about secure sharing.</p> 
+                        <div class="liveshare-share-post js-liveshare-action-post">
+                            <blockquote id="js-share-with-yourself-blockquote">
+                                <p>Want to evaluate VS Live Share but don't have anyone to collaborate with? No problem! You can actually join your own session from another instance of VS Code.</p>
+                            </blockquote>
+                            <p id="js-join-uri">Collaboration session URL: <div class="box js-liveshare-join-uri-button">${this.joinUri}</div></p>
+                            <button class="copy-invite-button js-liveshare-join-uri-button">Copy invite link</button> <button class="js-liveshare-join-self-button">Try joining yourself</button>
+                        </div>
+                    </li>
+                    <li>
+                        <p><span class="step-heading">Collaborate</span> - That's it! Once an invited "guest" joins, you'll get a notification, and will see their cursor appear in your currently opened file. All guests will start out <a id="follow-guest-link1" href="https://aka.ms/vsls-docs/vscode#following">"following"</a> you, which means that as you scroll or navigate between files, they will track those actions as well. This makes it easy to orient them with the issue/question/task you're about to start collaborating on.</p>
+                        <p>Additionally, to get the most out of Live Share, here are a few things to try out:</p>
+                        <ul>
+                            <li>Move your cursor, edit and highlight text, and watch guests do the same</li>
+                            <li><a id="follow-guest-link2" href="https://aka.ms/vsls-docs/vscode#following">Follow a guest</a>, and have them scroll and/or navigate to other files</li>
+                            <li><a id="share-debug-session-link" href="https://aka.ms/vsls-docs/vscode#co-debugging">Share a debugging session</a>, by pressing F5, and then stepping together in real time</li>
+                            <li><a id="share-server-link" href="https://aka.ms/vsls-docs/vscode#share-a-server">Share a server</a>, so guests can view a locally running web app, database, etc.</li>
+                            <li><a id="share-terminal-link" href="https://aka.ms/vsls-docs/vscode#share-a-terminal">Share a terminal</a> and run commands collaboratively</li>
+                            <li><a id="start-voice-call-link" href="https://aka.ms/vsls-audio">Start a voice call</a> using the VS Live Share Audio extension</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="js-liveshare-join-full">
+                <p>Welcome to Visual Studio Live Share! You’ve just joined into a collaboration session. Now that you are in, here are a couple things to try to begin collaborating in real-time:</p>
+                <div class="js-liveshare-action-signin">
+                    <button class="sign-in-button js-sign-in-button">Launch Sign In</button>
+                    <details class="why-details">
+                        <summary><a id="join-why-sign-in" class="pointer">Why sign in?</a></summary>
+                        <p>When collaborating, it's important that others can identify who you are, in order to be confident with sharing access to their code and development environment. To make it easy to get started, you can sign in using an existing GitHub or Microsoft account.</p>
+                    </details>
+                    <p class="step-heading separator">After signing in:</p>
+                </div>
+                <ol>
+                    <li>
+                        <p><span class="step-heading">Edit</span> – Now that you are in a collaboration session, you can move your cursor around, edit, and highlight text. You can see other participants doing the same.</p>  
+                        <p>You can access all Live Share functionality by clicking on the Live Share icon in the activity bar on the left and opening the Live Share viewlet tab.</p>
+                        <img src="https://aka.ms/vsls/quickstart/join" width="136px" alt="Visual Studio Code command viewlet" />
+                        <p>From here, you can see participants in the session as well as servers and terminals that have been shared. You can also see this viewlet in the Explorer tab as well.</p>
+                        <ul>
+                            <li>Move to other files in the code. You are able to navigate around the project.</li>
+                            <li>Follow any participant in a session by clicking their name under the “Participants” list in the Live Share viewlet tab.</li>
+                            <li>Focus a participant, and call attention to a part of the code that you are looking at.</li>
+                            <li>Join a voice call, using the <a id="start-voice-call-link" href="https://aka.ms/vsls-audio">VS Live Share Audio extension</a>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><span class="step-heading">Debug</span> – Work through an issue/question/task with your team in real-time using the many collaborative debugging features.</p>
+                        <ul>
+                            <li>🐞 Debug together, when in a debugging session, set breakpoints and step together in real time.</li>
+                            <li>☁️ View shared severs, under “Shared Servers” in the Live Share viewlet to view the host’s locally running web app, databases, etc.</li>
+                            <li>💻 View shared terminals, under “Shared Terminals” to view or run commands in the host’s terminal.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <p>If you run into any problems, see our <a id="troubleshooting-link" href="http://aka.ms/vsls-troubleshooting">troubleshooting documentation</a> for potential workarounds. Additionally, if you have any questions and/or feedback, please don't hesitate to reach out to the team on <a id="github-link" href="http://github.com/microsoft/live-share">GitHub</a>.</p>
+        </div>
+        <script nonce="${nonce}" src="${mainScriptUri}"></script>
+    </body>
+</html>

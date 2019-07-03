@@ -1,0 +1,57 @@
+{
+	"name": "rails-go-to-spec",
+	"displayName": "Rails Go to Spec",
+	"description": "Switch between code and spec in Rails",
+	"version": "0.0.1",
+	"publisher": "sporto",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.railsGoToSpec"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.railsGoToSpec",
+				"title": "Rails Go to Spec"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.railsGoToSpec",
+				"key": "ctrl+shift+y",
+				"mac": "cmd+shift+y",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"test": "ava",
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"mkdirp": "^0.5.1"
+	},
+	"devDependencies": {
+		"ava": "^0.14.0",
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.12"
+	},
+	"ava": {
+		"files": [
+			"out/src/*.test.js"
+		]
+	},
+	"__metadata": {
+		"id": "6472e990-7a38-4fb4-8fe3-ea7d67d2155e",
+		"publisherId": "f33c3894-f9a5-434b-9f86-8eaba34b26a5",
+		"publisherDisplayName": "sporto"
+	}
+}

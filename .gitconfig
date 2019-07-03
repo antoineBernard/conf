@@ -1,0 +1,22 @@
+[user]
+	name = Antoine Bernard
+	email = abernard@octo.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+    tree = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[core]
+	excludesfile = /Users/antoine.a.bernard/.gitignore_global
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[commit]
+	template = /Users/antoine.a.bernard/.stCommitMsg
