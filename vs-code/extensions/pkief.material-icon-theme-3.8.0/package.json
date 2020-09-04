@@ -199,7 +199,7 @@
 		"vscode:prepublish": "npm run lint && npm run compile"
 	},
 	"dependencies": {
-		"lodash.merge": "4.6.1",
+		"lodash.merge": "4.6.2",
 		"open": "6.3.0",
 		"semver": "6.1.0"
 	},
