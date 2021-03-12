@@ -2159,7 +2159,7 @@
 		"gulp-tslint": "^8.1.2",
 		"gulp-typescript": "^5.0.0",
 		"json-stable-stringify": "^1.0.1",
-		"madge": "^3.2.0",
+		"madge": "^4.0.1",
 		"minimist": "^1.2.0",
 		"mocha": "^6.0.2",
 		"mocha-trx-reporter": "^3.2.0",
